@@ -1,0 +1,60 @@
+server {
+        server_name blueforest.org;
+        listen 80;
+        listen [::]:80;
+        root /var/www/blueforest.org;
+        index index.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+        location /api {
+                proxy_pass http://trees-api:8080;
+        }
+}
+
+server {
+        server_name show.blueforest.org;
+        listen 80;
+        listen [::]:80;
+        root /var/www/show.blueforest.org;
+        index index.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+        location /api {
+                proxy_pass http://trees-api:8080;
+        }
+}
+
+server {
+        server_name play.blueforest.org;
+        listen 80;
+        listen [::]:80;
+        root /var/www/play.blueforest.org;
+        index index.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+server {
+        server_name draw.blueforest.org;
+        listen 80;
+        listen [::]:80;
+        root /var/www/draw.blueforest.org;
+        index index.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+server {
+        server_name histoires.xyz;
+        listen 80;
+        listen [::]:80;
+        root /var/www/histoires.xyz;
+        index index.html;
+        location / {
+                proxy_pass http://192.168.1.19/;
+        }
+}
