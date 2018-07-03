@@ -1,0 +1,20 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:latest
+    stdin_open: true
+    external_links:
+    - blueforest/trees-web-draw:trees-web-draw
+    - blueforest/trees-web-show:trees-web-show
+    - blueforest/trees-web:trees-web
+    - histoires/time-web:time-web
+    - blueforest/trees-web-play:trees-web-play
+    volumes:
+    - /var/www/frontal/nginx:/etc/nginx:ro
+    - /var/www/frontal/static:/var/www:ro
+    tty: true
+    ports:
+    - 80:80/tcp
+    - 443:443/tcp
+    labels:
+      io.rancher.container.pull_image: always
