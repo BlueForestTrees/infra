@@ -71,3 +71,7 @@ services:
     - trees-api:trees-api
     labels:
       io.rancher.container.pull_image: always
+    environment:
+    - "VIRTUAL_HOST=blueforest.org"
+    - "LETSENCRYPT_HOST=blueforest.org"
+    - "LETSENCRYPT_EMAIL=slimane.medini@blueforest.org"
