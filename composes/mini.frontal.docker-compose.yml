@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/www/frontal/nginx:/etc/nginx"
+    external_links:
+        - blueforest/trees-web-play:trees-web-play
+        - blueforest/trees-web-show:trees-web-show
+        - blueforest/trees-web:trees-web
+        - blueforest/trees-web-draw:trees-web-draw
+        - histoires/time-web:time-web
