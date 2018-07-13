@@ -1,0 +1,75 @@
+version: '2'
+services:
+  trees-api:
+    image: blueforest/trees-api:latest
+    environment:
+      DB_HOST: trees-mongo
+      NODE_ENV: production
+      PORT: '8080'
+    stdin_open: true
+    volumes:
+      - /etc/trees-api/mailConfig.json:/dist/templates/mailConfig.json:ro
+    tty: true
+    links:
+    - trees-mongo:database
+    labels:
+      io.rancher.container.pull_image: always
+  trees-web-show:
+    image: nginx:latest
+    stdin_open: true
+    volumes:
+    - /var/www/show.blueforest.org/nginx:/etc/nginx:ro
+    - /var/www/show.blueforest.org/static:/var/www:ro
+    tty: true
+    links:
+    - trees-api:trees-api
+    labels:
+      io.rancher.container.pull_image: always
+  trees-web-draw:
+    image: nginx:latest
+    environment:
+      NODE_ENV: production
+    stdin_open: true
+    volumes:
+    - /var/www/draw.blueforest.org/nginx:/etc/nginx:ro
+    - /var/www/draw.blueforest.org/static:/var/www:ro
+    tty: true
+    links:
+    - trees-api:trees-api
+    labels:
+      io.rancher.container.pull_image: always
+  trees-mongo:
+    image: mongo:latest
+    environment:
+      MONGO_DATA_DIR: /data/db
+      MONGO_LOG_DIR: /dev/null
+    stdin_open: true
+    volumes:
+    - /var/lib/trees/mongo:/data/db
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  trees-web-play:
+    image: nginx:latest
+    environment:
+      NODE_ENV: production
+    stdin_open: true
+    volumes:
+    - /var/www/play.blueforest.org/nginx:/etc/nginx:ro
+    - /var/www/play.blueforest.org/static:/var/www:ro
+    tty: true
+    links:
+    - trees-api:trees-api
+    labels:
+      io.rancher.container.pull_image: always
+  trees-web:
+    image: nginx:latest
+    stdin_open: true
+    volumes:
+    - /var/www/blueforest.org/nginx:/etc/nginx:ro
+    - /var/www/blueforest.org/static:/var/www:ro
+    tty: true
+    links:
+    - trees-api:trees-api
+    labels:
+      io.rancher.container.pull_image: always

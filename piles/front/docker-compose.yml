@@ -1,0 +1,37 @@
+version: '2'
+services:
+  lb:
+    image: rancher/lb-service-haproxy:v0.9.1
+    ports:
+    - 80:80/tcp
+    - 443:443/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin,agent
+      io.rancher.container.agent_service.drain_provider: 'true'
+      io.rancher.container.create_agent: 'true'
+  https-redirect:
+    image: geldim/https-redirect:latest
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  letsencrypt:
+    image: janeczku/rancher-letsencrypt:v0.5.0
+    environment:
+      API_VERSION: Production
+      CERT_NAME: certif
+      DNS_RESOLVERS: 8.8.8.8:53,8.8.4.4:53
+      DOMAINS: blueforest.org
+      EMAIL: slimane.medini@blueforest.org
+      EULA: 'Yes'
+      PROVIDER: HTTP
+      PUBLIC_KEY_TYPE: RSA-2048
+      RENEWAL_PERIOD_DAYS: '20'
+      RENEWAL_TIME: '12'
+      RUN_ONCE: 'false'
+      VULTR_API_KEY: ''
+    volumes:
+    - /var/lib/rancher:/var/lib/rancher
+    labels:
+      io.rancher.container.agent.role: environment
+      io.rancher.container.create_agent: 'true'
