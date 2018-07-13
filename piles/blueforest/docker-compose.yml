@@ -8,7 +8,8 @@ services:
       PORT: '8080'
     stdin_open: true
     volumes:
-      - /etc/trees-api/mailConfig.json:/dist/templates/mailConfig.json:ro
+    - /etc/trees-api/mailConfig.json:/dist/mailConfig.json:ro
+    - /etc/trees-api/templates:/templates:ro
     tty: true
     links:
     - trees-mongo:database
