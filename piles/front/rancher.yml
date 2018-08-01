@@ -25,7 +25,7 @@ services:
 #        path: /
 #        priority: 3
 #        protocol: https
-#        service: blueforest/trees-web
+#        service: blueforest/web-tree
 #        source_port: 443
 #        target_port: 80
 #      - hostname: show.blueforest.org

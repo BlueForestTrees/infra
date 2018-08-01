@@ -1,16 +1,16 @@
 version: '2'
 services:
-  trees-api:
-    image: blueforest/trees-api:latest
+  api-tree:
+    image: blueforest/api-tree:latest
     environment:
       DB_HOST: trees-mongo
       NODE_ENV: production
       PORT: '8080'
-      MAIL_CONFIG_PATH: /etc/trees-api
-      MAIL_TEMPLATE_PATH: /etc/trees-api/templates
+      MAIL_CONFIG_PATH: /etc/api-tree
+      MAIL_TEMPLATE_PATH: /etc/api-tree/templates
     stdin_open: true
     volumes:
-    - /etc/trees-api:/etc/trees-api:ro
+    - /etc/api-tree:/etc/api-tree:ro
     tty: true
     links:
     - trees-mongo:database
@@ -24,7 +24,7 @@ services:
 #    - /var/www/show.blueforest.org/static:/var/www:ro
 #    tty: true
 #    links:
-#    - trees-api:trees-api
+#    - api-tree:api-tree
 #    labels:
 #      io.rancher.container.pull_image: always
 #  trees-web-draw:
@@ -37,7 +37,7 @@ services:
 #    - /var/www/draw.blueforest.org/static:/var/www:ro
 #    tty: true
 #    links:
-#    - trees-api:trees-api
+#    - api-tree:api-tree
 #    labels:
 #      io.rancher.container.pull_image: always
   trees-mongo:
@@ -61,10 +61,10 @@ services:
 #    - /var/www/play.blueforest.org/static:/var/www:ro
 #    tty: true
 #    links:
-#    - trees-api:trees-api
+#    - api-tree:api-tree
 #    labels:
 #      io.rancher.container.pull_image: always
-  trees-web:
+  web-tree:
     image: nginx:latest
     stdin_open: true
     volumes:
@@ -72,6 +72,6 @@ services:
     - /var/www/blueforest.org/static:/var/www:ro
     tty: true
     links:
-    - trees-api:trees-api
+    - api-tree:api-tree
     labels:
       io.rancher.container.pull_image: always
