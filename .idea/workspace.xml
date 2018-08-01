@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7792c66f-b75b-44de-ac70-5ca7aeb83adc" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/piles/blueforest/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rancher.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/piles/front/rancher.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/piles/front/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="14" selection-end-line="36" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>proxy</find>
+      <find>./volumes/conf.d</find>
+      <find>./volumes</find>
+      <find>certs</find>
+      <find>nginx.tmpl</find>
+      <find>docker-gen</find>
+      <find>/etc/nginx/conf</find>
+      <find>letsencrypt_service_data</find>
+      <find>conf.d</find>
+      <find>proxy-tier</find>
+      <find>server</find>
+      <find>$value</find>
+      <find>$address</find>
+      <find>trees-web</find>
+      <find>$host</find>
+      <find>networks</find>
+      <find>server_names_hash_bucket_size</find>
+      <find>time-web</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="smedini@gmail.com" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/etc/nginx/sites-available/default" />
+        <option value="$PROJECT_DIR$/default" />
+        <option value="$PROJECT_DIR$/trees/nginx.conf" />
+        <option value="$PROJECT_DIR$/histoires/nginx.conf" />
+        <option value="$PROJECT_DIR$/nginx.conf" />
+        <option value="$PROJECT_DIR$/var/www/frontal/nginx/conf/mime.types" />
+        <option value="$PROJECT_DIR$/var/www/frontal/static/index.html" />
+        <option value="$PROJECT_DIR$/var/www/frontal/static/certif/test" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
+        <option value="$PROJECT_DIR$/var/www/frontal/docker-gen/nginx.tmpl" />
+        <option value="$PROJECT_DIR$/composes/blueforest.compose.yml" />
+        <option value="$PROJECT_DIR$/composes/frontal.docker-compose.yml" />
+        <option value="$PROJECT_DIR$/composes/docker-gen.frontal.docker-compose.yml" />
+        <option value="$PROJECT_DIR$/composes/letsencrypt.docker-compose.yml" />
+        <option value="$PROJECT_DIR$/composes/new-letsencrypt.docker-compose.yml" />
+        <option value="$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+        <option value="$PROJECT_DIR$/composes/mini.frontal.docker-compose.yml" />
+        <option value="$PROJECT_DIR$/piles/front/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/piles/histoires/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/piles/front/rancher.yml" />
+        <option value="$PROJECT_DIR$/piles/blueforest/docker-compose.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="538" />
+    <option name="y" value="58" />
+    <option name="width" value="1776" />
+    <option name="height" value="1052" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="trees-frontal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trees-frontal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trees-frontal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trees-frontal" type="462c0819:PsiDirectoryNode" />
+              <item name="piles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trees-frontal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trees-frontal" type="462c0819:PsiDirectoryNode" />
+              <item name="piles" type="462c0819:PsiDirectoryNode" />
+              <item name="blueforest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trees-frontal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trees-frontal" type="462c0819:PsiDirectoryNode" />
+              <item name="piles" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trees-frontal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trees-frontal" type="462c0819:PsiDirectoryNode" />
+              <item name="piles" type="462c0819:PsiDirectoryNode" />
+              <item name="histoires" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GO_FMT" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\slima\WebstormProjects\trees-frontal" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\slima\WebstormProjects\trees-frontal\var\www\frontal\acme" />
+      <recent name="C:\Users\slima\WebstormProjects\trees-frontal\var\www\frontal\docker-gen" />
+      <recent name="C:\Users\slima\WebstormProjects\trees-frontal\var\www\frontal\docker-gen\templates" />
+      <recent name="C:\Users\slima\WebstormProjects\trees-frontal\composes" />
+      <recent name="C:\Users\slima\WebstormProjects\trees-frontal\var\www\frontal\static\certif" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7792c66f-b75b-44de-ac70-5ca7aeb83adc" name="Default" comment="" />
+      <created>1525294536103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525294536103</updated>
+      <workItem from="1525294537325" duration="765000" />
+      <workItem from="1525534351852" duration="2397000" />
+      <workItem from="1525680547694" duration="596000" />
+      <workItem from="1525971552621" duration="93000" />
+      <workItem from="1526027419864" duration="32000" />
+      <workItem from="1529747691165" duration="318000" />
+      <workItem from="1529769315733" duration="32000" />
+      <workItem from="1529913451794" duration="33000" />
+      <workItem from="1529913584284" duration="287000" />
+      <workItem from="1529914030276" duration="48000" />
+      <workItem from="1529914192546" duration="32000" />
+      <workItem from="1529914273776" duration="40000" />
+      <workItem from="1529914914681" duration="12863000" />
+      <workItem from="1529934910705" duration="2224000" />
+      <workItem from="1530002374433" duration="3460000" />
+      <workItem from="1530007385748" duration="89000" />
+      <workItem from="1530096072244" duration="2426000" />
+      <workItem from="1530438426238" duration="12000" />
+      <workItem from="1530606374097" duration="8014000" />
+      <workItem from="1530628426696" duration="33060000" />
+      <workItem from="1531045066061" duration="1526000" />
+      <workItem from="1531483666273" duration="814000" />
+      <workItem from="1531496726821" duration="1270000" />
+      <workItem from="1531555357256" duration="24000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1525294601144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525294601144</updated>
+    </task>
+    <task id="LOCAL-00002" summary="rancher ok">
+      <created>1529935511393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1529935511393</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rancher ok">
+      <created>1530004815451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530004815451</updated>
+    </task>
+    <task id="LOCAL-00004" summary="rancher ok">
+      <created>1530007462788</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1530007462788</updated>
+    </task>
+    <task id="LOCAL-00005" summary="frontal ok pour acme challenge">
+      <created>1530610625987</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530610625987</updated>
+    </task>
+    <task id="LOCAL-00006" summary="frontal ok pour acme challenge">
+      <created>1530631217529</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1530631217529</updated>
+    </task>
+    <task id="LOCAL-00007" summary="version complete">
+      <created>1530637635116</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1530637635116</updated>
+    </task>
+    <task id="LOCAL-00008" summary="recherche en ssl">
+      <created>1530696208268</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1530696208268</updated>
+    </task>
+    <task id="LOCAL-00009" summary="minimal">
+      <created>1530696349957</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1530696349957</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rancher ok en https pour blueforest.org">
+      <created>1530720410146</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1530720410146</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rancher ok en https pour blueforest.org">
+      <created>1531486067992</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1531486067992</updated>
+    </task>
+    <task id="LOCAL-00012" summary="volume pour api.mail">
+      <created>1531496788463</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1531496788463</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="70455000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.4424307" side_tool="true" weight="0.42379957" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.46033403" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.5575693" visible="true" weight="0.13152401" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="rancher ok" />
+    <MESSAGE value="frontal ok pour acme challenge" />
+    <MESSAGE value="version complete" />
+    <MESSAGE value="recherche en ssl" />
+    <MESSAGE value="minimal" />
+    <MESSAGE value="rancher ok en https pour blueforest.org" />
+    <MESSAGE value="volume pour api.mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="volume pour api.mail" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/piles/blueforest/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/front/rancher.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/front/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/front/rancher.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/front/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" lean-forward="true" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/blueforest/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/docker-gen/nginx.tmpl" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/trees/nginx.conf" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/conf/mime.types" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/docker-gen/nginx.tmpl" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/acme/test" />
+    <entry file="file://$PROJECT_DIR$/composes/new-letsencrypt.docker-compose.yml" />
+    <entry file="file://$PROJECT_DIR$/composes/letsencrypt.docker-compose.yml" />
+    <entry file="file://$PROJECT_DIR$/composes/mini.frontal.docker-compose.yml" />
+    <entry file="file://$PROJECT_DIR$/composes/docker-gen.frontal.docker-compose.yml" />
+    <entry file="file://$PROJECT_DIR$/composes/blueforest.compose.yml" />
+    <entry file="file://$PROJECT_DIR$/var/www/frontal/nginx/nginx.conf" />
+    <entry file="file://$PROJECT_DIR$/piles/histoires/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/front/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/front/rancher.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piles/blueforest/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
