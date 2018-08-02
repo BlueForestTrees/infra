@@ -6,9 +6,6 @@ services:
       DB_HOST: trees-mongo
       NODE_ENV: production
       PORT: '8080'
-      MAIL_CONFIG_PATH: /etc/api-tree
-      MAIL_TEMPLATE_PATH: /etc/api-tree/templates
-      REST_PATH: dist/rest
     stdin_open: true
     volumes:
     - /etc/api-tree:/etc/api-tree:ro
