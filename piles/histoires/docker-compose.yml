@@ -19,8 +19,8 @@ services:
       PORT: '80'
     stdin_open: true
     volumes:
-    - /var/www/histoires.xyz/nginx:/etc/nginx:ro
-    - /var/www/histoires.xyz/static:/var/www:ro
+    - /etc/nginx/histoires.xyz:/etc/nginx:ro
+    - /var/www/histoires.xyz:/var/www:ro
     tty: true
     links:
     - time-api:time-api
