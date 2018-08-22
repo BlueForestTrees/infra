@@ -28,27 +28,6 @@ services:
         service: blueforest/web-tree
         source_port: 443
         target_port: 80
-#      - hostname: show.blueforest.org
-#        path: /
-#        priority: 4
-#        protocol: http
-#        service: blueforest/trees-web-show
-#        source_port: 80
-#        target_port: 80
-#      - hostname: play.blueforest.org
-#        path: /
-#        priority: 5
-#        protocol: http
-#        service: blueforest/trees-web-play
-#        source_port: 80
-#        target_port: 80
-#      - hostname: draw.blueforest.org
-#        path: /
-#        priority: 6
-#        protocol: http
-#        service: blueforest/trees-web-draw
-#        source_port: 80
-#        target_port: 80
       - hostname: histoires.xyz
         path: /
         priority: 7

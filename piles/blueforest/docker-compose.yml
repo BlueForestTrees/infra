@@ -14,30 +14,6 @@ services:
     - trees-mongo:database
     labels:
       io.rancher.container.pull_image: always
-#  trees-web-show:
-#    image: nginx:latest
-#    stdin_open: true
-#    volumes:
-#    - /var/www/show.blueforest.org/nginx:/etc/nginx:ro
-#    - /var/www/show.blueforest.org/static:/var/www:ro
-#    tty: true
-#    links:
-#    - api-tree:api-tree
-#    labels:
-#      io.rancher.container.pull_image: always
-#  trees-web-draw:
-#    image: nginx:latest
-#    environment:
-#      NODE_ENV: production
-#    stdin_open: true
-#    volumes:
-#    - /var/www/draw.blueforest.org/nginx:/etc/nginx:ro
-#    - /var/www/draw.blueforest.org/static:/var/www:ro
-#    tty: true
-#    links:
-#    - api-tree:api-tree
-#    labels:
-#      io.rancher.container.pull_image: always
   trees-mongo:
     image: mongo:latest
     environment:
@@ -49,25 +25,12 @@ services:
     tty: true
     labels:
       io.rancher.container.pull_image: always
-#  trees-web-play:
-#    image: nginx:latest
-#    environment:
-#      NODE_ENV: production
-#    stdin_open: true
-#    volumes:
-#    - /var/www/play.blueforest.org/nginx:/etc/nginx:ro
-#    - /var/www/play.blueforest.org/static:/var/www:ro
-#    tty: true
-#    links:
-#    - api-tree:api-tree
-#    labels:
-#      io.rancher.container.pull_image: always
   web-tree:
     image: nginx:latest
     stdin_open: true
     volumes:
-    - /var/www/blueforest.org/nginx:/etc/nginx:ro
-    - /var/www/blueforest.org/static:/var/www:ro
+    - /etc/nginx/blueforest.org:/etc/nginx:ro
+    - /var/www/blueforest.org:/var/www:ro
     tty: true
     links:
     - api-tree:api-tree
