@@ -4,6 +4,8 @@ services:
     image: blueforest/api-tree:latest
     environment:
       DB_HOST: trees-mongo
+      DB_USER:
+      DB_PWD:
       NODE_ENV: production
       PORT: '8080'
     stdin_open: true
@@ -22,9 +24,12 @@ services:
     stdin_open: true
     volumes:
     - /var/lib/trees/mongo:/data/db
+    command: mongod --auth
     tty: true
     labels:
       io.rancher.container.pull_image: always
+    ports:
+    - 27277:27017
   web-tree:
     image: nginx:latest
     stdin_open: true
