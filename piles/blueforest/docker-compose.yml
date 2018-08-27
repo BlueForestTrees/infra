@@ -4,8 +4,8 @@ services:
     image: blueforest/api-tree:latest
     environment:
       DB_HOST: trees-mongo
-      DB_USER:
-      DB_PWD:
+      DB_USER: XXX
+      DB_PWD: YYY
       NODE_ENV: production
       PORT: '8080'
     stdin_open: true
@@ -21,6 +21,8 @@ services:
     environment:
       MONGO_DATA_DIR: /data/db
       MONGO_LOG_DIR: /dev/null
+      MONGO_INITDB_ROOT_USERNAME: XXX
+      MONGO_INITDB_ROOT_PASSWORD: YYY
     stdin_open: true
     volumes:
     - /var/lib/trees/mongo:/data/db
