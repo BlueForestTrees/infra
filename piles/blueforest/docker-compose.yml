@@ -30,7 +30,7 @@ services:
       io.rancher.container.pull_image: always
     ports:
     - 27277:27017
-  web-tree:
+  web:
     image: nginx:latest
     stdin_open: true
     volumes:
