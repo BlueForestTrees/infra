@@ -1,40 +1,50 @@
 version: '2'
 services:
-  categories:
-    image: blueforest/categories:latest
-    environment:
-      DB_HOST: mongo
-      DB_USER: XXX
-      DB_PWD: YYY
-      NODE_ENV: production
-      PORT: '8080'
-    links:
-    - mongo:database
-  feedback:
-    image: blueforest/feedback:latest
-    environment:
-      DB_HOST: mongo
-      DB_USER: XXX
-      DB_PWD: YYY
-      NODE_ENV: production
-      PORT: '8080'
-    links:
-    - mongo:database
+#  auth:
+#    image: blueforest/auth:latest
+#    environment:
+#      DB_HOST: mongo
+#      DB_USER: XXX
+#      DB_PWD: YYY
+#      NODE_ENV: production
+#      PORT: '8080'
+#    links:
+#    - mongo:database
+#  categories:
+#    image: blueforest/categories:latest
+#    environment:
+#      DB_HOST: mongo
+#      DB_USER: XXX
+#      DB_PWD: YYY
+#      NODE_ENV: production
+#      PORT: '8080'
+#    links:
+#    - mongo:database
+#  feedback:
+#    image: blueforest/feedback:latest
+#    environment:
+#      DB_HOST: mongo
+#      DB_USER: XXX
+#      DB_PWD: YYY
+#      NODE_ENV: production
+#      PORT: '8080'
+#    links:
+#    - mongo:database
   grandeur:
     image: blueforest/grandeur:latest
     environment:
       NODE_ENV: production
       PORT: '8080'
-  import:
-    image: blueforest/import:latest
-    environment:
-      DB_HOST: mongo
-      DB_USER: XXX
-      DB_PWD: YYY
-      NODE_ENV: production
-      PORT: '8080'
-    links:
-    - mongo:database
+#  import:
+#    image: blueforest/import:latest
+#    environment:
+#      DB_HOST: mongo
+#      DB_USER: XXX
+#      DB_PWD: YYY
+#      NODE_ENV: production
+#      PORT: '8080'
+#    links:
+#    - mongo:database
   trees:
     image: blueforest/trees:latest
     environment:
@@ -43,14 +53,8 @@ services:
       DB_PWD: YYY
       NODE_ENV: production
       PORT: '8080'
-    stdin_open: true
-    volumes:
-    - /etc/trees:/etc/trees:ro
-    tty: true
     links:
     - mongo:database
-    labels:
-      io.rancher.container.pull_image: always
   mongo:
     image: mongo:latest
     environment:
@@ -58,27 +62,20 @@ services:
       MONGO_LOG_DIR: /dev/null
       MONGO_INITDB_ROOT_USERNAME: XXX
       MONGO_INITDB_ROOT_PASSWORD: YYY
-    stdin_open: true
     volumes:
     - /var/lib/trees/mongo:/data/db
     command: mongod --auth
-    tty: true
-    labels:
-      io.rancher.container.pull_image: always
     ports:
     - 27277:27017
   web:
     image: nginx:latest
-    stdin_open: true
     volumes:
     - /etc/nginx/blueforest.org:/etc/nginx:ro
     - /var/www/blueforest.org:/var/www:ro
-    tty: true
     links:
-    - trees:trees
-    - categorie:categorie
-    - feedback:feedback
+#    - trees:trees
+#    - auth:auth
+#    - categorie:categorie
+#    - feedback:feedback
     - grandeur:grandeur
-    - import:import
-    labels:
-      io.rancher.container.pull_image: always
+#    - import:import
