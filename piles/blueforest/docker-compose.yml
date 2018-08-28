@@ -1,22 +1,57 @@
 version: '2'
 services:
-  api-tree:
-    image: blueforest/api-tree:latest
+  categories:
+    image: blueforest/categories:latest
     environment:
-      DB_HOST: trees-mongo
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+    links:
+    - mongo:database
+  feedback:
+    image: blueforest/feedback:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+    links:
+    - mongo:database
+  grandeur:
+    image: blueforest/grandeur:latest
+    environment:
+      NODE_ENV: production
+      PORT: '8080'
+  import:
+    image: blueforest/import:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+    links:
+    - mongo:database
+  trees:
+    image: blueforest/trees:latest
+    environment:
+      DB_HOST: mongo
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
       PORT: '8080'
     stdin_open: true
     volumes:
-    - /etc/api-tree:/etc/api-tree:ro
+    - /etc/trees:/etc/trees:ro
     tty: true
     links:
-    - trees-mongo:database
+    - mongo:database
     labels:
       io.rancher.container.pull_image: always
-  trees-mongo:
+  mongo:
     image: mongo:latest
     environment:
       MONGO_DATA_DIR: /data/db
@@ -40,6 +75,10 @@ services:
     - /var/www/blueforest.org:/var/www:ro
     tty: true
     links:
-    - api-tree:api-tree
+    - trees:trees
+    - categorie:categorie
+    - feedback:feedback
+    - grandeur:grandeur
+    - import:import
     labels:
       io.rancher.container.pull_image: always
