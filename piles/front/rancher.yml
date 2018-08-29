@@ -22,15 +22,22 @@ services:
         source_port: 80
         target_port: 80
       - hostname: blueforest.org
-        path: /
+        path: /api
         priority: 3
+        protocol: https
+        service: blueforest/api
+        source_port: 443
+        target_port: 80
+      - hostname: blueforest.org
+        path: /
+        priority: 4
         protocol: https
         service: blueforest/web
         source_port: 443
         target_port: 80
       - hostname: histoires.xyz
         path: /
-        priority: 7
+        priority: 5
         protocol: http
         service: histoires/time-web
         source_port: 80
