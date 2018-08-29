@@ -10,16 +10,16 @@ services:
 #      PORT: '8080'
 #    links:
 #    - mongo:database
-#  categories:
-#    image: blueforest/categories:latest
-#    environment:
-#      DB_HOST: mongo
-#      DB_USER: XXX
-#      DB_PWD: YYY
-#      NODE_ENV: production
-#      PORT: '8080'
-#    links:
-#    - mongo:database
+  categorie:
+    image: blueforest/categorie:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+    links:
+    - mongo:database
 #  feedback:
 #    image: blueforest/feedback:latest
 #    environment:
@@ -35,16 +35,16 @@ services:
     environment:
       NODE_ENV: production
       PORT: '8080'
-#  import:
-#    image: blueforest/import:latest
-#    environment:
-#      DB_HOST: mongo
-#      DB_USER: XXX
-#      DB_PWD: YYY
-#      NODE_ENV: production
-#      PORT: '8080'
-#    links:
-#    - mongo:database
+  import:
+    image: blueforest/import:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+    links:
+    - mongo:database
   trees:
     image: blueforest/trees:latest
     environment:
@@ -73,9 +73,9 @@ services:
     - /etc/nginx/blueforest.org:/etc/nginx:ro
     - /var/www/blueforest.org:/var/www:ro
     links:
-#    - trees:trees
+    - trees:trees
 #    - auth:auth
-#    - categorie:categorie
+    - categorie:categorie
 #    - feedback:feedback
     - grandeur:grandeur
-#    - import:import
+    - import:import
