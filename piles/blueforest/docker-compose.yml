@@ -22,17 +22,17 @@ services:
       DEBUG: api:*
     links:
     - mongo:database
-#  feedback:
-#    image: blueforest/feedback:latest
-#    environment:
-#      DB_HOST: mongo
-#      DB_USER: XXX
-#      DB_PWD: YYY
-#      NODE_ENV: production
-#      PORT: '8080'
-#      DEBUG: api:*
-#    links:
-#    - mongo:database
+  feedback:
+    image: blueforest/feedback:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+      DEBUG: api:*
+    links:
+    - mongo:database
   grandeur:
     image: blueforest/grandeur:latest
     environment:
@@ -81,7 +81,7 @@ services:
     - trees:trees
     #    - auth:auth
     - categorie:categorie
-    #    - feedback:feedback
+    - feedback:feedback
     - grandeur:grandeur
     - import:import
   web:
