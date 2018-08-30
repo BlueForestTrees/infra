@@ -1,16 +1,18 @@
 version: '2'
 services:
-#  auth:
-#    image: blueforest/auth:latest
-#    environment:
-#      DB_HOST: mongo
-#      DB_USER: XXX
-#      DB_PWD: YYY
-#      NODE_ENV: production
-#      PORT: '8080'
-#      DEBUG: api:*
-#    links:
-#    - mongo:database
+  auth:
+    image: blueforest/auth:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+      DEBUG: api:*
+    links:
+    - mongo:database
+    volumes:
+      - /etc/api-auth:/etc/api-auth
   categorie:
     image: blueforest/categorie:latest
     environment:
@@ -79,7 +81,7 @@ services:
     - /etc/nginx/blueforest.org/api:/etc/nginx:ro
     links:
     - trees:trees
-    #    - auth:auth
+    - auth:auth
     - categorie:categorie
     - feedback:feedback
     - grandeur:grandeur
