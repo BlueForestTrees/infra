@@ -78,9 +78,9 @@ services:
   api:
     image: openresty/openresty:alpine
     volumes:
-    - /etc/nginx/blueforest.org/api:/etc/nginx/:ro
+    - /etc/nginx/blueforest.org/api/:/usr/local/openresty/nginx/conf/:ro
     environment:
-      JWT_SECRET: courage
+      JWT_SECRET: ZZZ
     links:
     - trees:trees
     - auth:auth
