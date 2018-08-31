@@ -76,9 +76,11 @@ services:
     ports:
     - 27277:27017
   api:
-    image: nginx:latest
+    image: openresty/openresty:alpine
     volumes:
-    - /etc/nginx/blueforest.org/api:/etc/nginx:ro
+    - /etc/nginx/blueforest.org/api:/etc/nginx/:ro
+    environment:
+      JWT_SECRET: courage
     links:
     - trees:trees
     - auth:auth
