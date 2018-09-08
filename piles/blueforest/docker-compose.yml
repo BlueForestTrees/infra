@@ -9,6 +9,7 @@ services:
       NODE_ENV: production
       PORT: '8080'
       DEBUG: api:*
+      AUTH_TOKEN_SECRET: ZZZ
     links:
     - mongo:database
     volumes:
