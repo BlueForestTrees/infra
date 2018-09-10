@@ -1,7 +1,7 @@
 version: '2'
 services:
-  auth:
-    image: blueforest/auth:latest
+  user:
+    image: blueforest/user:latest
     environment:
       DB_HOST: mongo
       DB_USER: XXX
@@ -13,7 +13,20 @@ services:
     links:
     - mongo:database
     volumes:
-      - /etc/api-auth:/etc/api-auth
+      - /etc/user:/etc/user
+  facet:
+    image: blueforest/facet:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+      DEBUG: api:*
+      TREE_BASE_URL: "http://trees:8080"
+    links:
+    - mongo:database
+    - trees:trees
   categorie:
     image: blueforest/categorie:latest
     environment:
@@ -51,8 +64,10 @@ services:
       NODE_ENV: production
       PORT: '8080'
       DEBUG: api:*
+      USER_BASE_URL: "http://user:8080"
     links:
     - mongo:database
+    - user:user
   trees:
     image: blueforest/trees:latest
     environment:
@@ -84,7 +99,7 @@ services:
       JWT_SECRET: ZZZ
     links:
     - trees:trees
-    - auth:auth
+    - user:user
     - categorie:categorie
     - feedback:feedback
     - grandeur:grandeur
