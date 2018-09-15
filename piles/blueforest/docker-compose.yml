@@ -14,6 +14,17 @@ services:
     - mongo:database
     volumes:
       - /etc/user:/etc/user
+  message:
+    image: blueforest/message:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+      DEBUG: api:*
+    links:
+    - mongo:database
   facet:
     image: blueforest/facet:latest
     environment:
