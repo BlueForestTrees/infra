@@ -25,6 +25,17 @@ services:
       DEBUG: api:*
     links:
     - mongo:database
+  film:
+    image: blueforest/film:latest
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      PORT: '8080'
+      DEBUG: api:*
+    links:
+    - mongo:database
   facet:
     image: blueforest/facet:latest
     environment:
