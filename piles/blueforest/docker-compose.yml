@@ -1,7 +1,7 @@
 version: '2'
 services:
   user:
-    image: blueforest/user:latest
+    image: blueforest/user:1.0.5
     environment:
       DB_HOST: mongo
       DB_USER: XXX
