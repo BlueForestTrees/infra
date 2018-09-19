@@ -26,7 +26,7 @@ services:
     links:
     - mongo:database
   film:
-    image: blueforest/film:1.0.3
+    image: blueforest/film:1.0.4
     environment:
       DB_HOST: mongo
       DB_USER: XXX
