@@ -42,6 +42,20 @@ services:
         service: histoires/time-web
         source_port: 80
         target_port: 80
+      - hostname: draw.blueforest.org
+        path: /
+        priority: 6
+        protocol: http
+        service: blueforest/draw
+        source_port: 80
+        target_port: 80
+      - hostname: draw.blueforest.org
+        path: /api
+        priority: 8
+        protocol: http
+        service: blueforest/api
+        source_port: 80
+        target_port: 80
     health_check:
       healthy_threshold: 2
       response_timeout: 2000
