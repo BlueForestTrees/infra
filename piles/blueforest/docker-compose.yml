@@ -37,31 +37,46 @@ services:
     links:
     - mongo:database
   facet:
-    image: blueforest/facet:latest
+    image: blueforest/attribute:1.0.2
     environment:
+      NAME: facet
       DB_HOST: mongo
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
       DEBUG: api:*
-      TREE_BASE_URL: "http://trees:8080"
+      TREE_BASE_URL: "http://trees"
+    links:
+    - mongo:database
+    - trees:trees
+  damage:
+    image: blueforest/attribute:1.0.2
+    environment:
+      NAME: damage
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      DEBUG: api:*
+      TREE_BASE_URL: "http://trees"
+    links:
+    - mongo:database
+    - trees:trees
+  impact:
+    image: blueforest/attribute:1.0.2
+    environment:
+      NAME: impact
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      DEBUG: api:*
+      TREE_BASE_URL: "http://trees"
     links:
     - mongo:database
     - trees:trees
   categorie:
     image: blueforest/categorie:latest
-    environment:
-      DB_HOST: mongo
-      DB_USER: XXX
-      DB_PWD: YYY
-      NODE_ENV: production
-      PORT: '8080'
-      DEBUG: api:*
-    links:
-    - mongo:database
-  feedback:
-    image: blueforest/feedback:latest
     environment:
       DB_HOST: mongo
       DB_USER: XXX
@@ -78,26 +93,24 @@ services:
       PORT: '8080'
       DEBUG: api:*
   import:
-    image: blueforest/import:latest
+    image: blueforest/import:1.0.12
     environment:
       DB_HOST: mongo
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
       DEBUG: api:*
       USER_BASE_URL: "http://user:8080"
     links:
     - mongo:database
     - user:user
   trees:
-    image: blueforest/trees:latest
+    image: blueforest/trees:1.0.5
     environment:
       DB_HOST: mongo
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
       DEBUG: api:*
     links:
     - mongo:database
@@ -123,7 +136,8 @@ services:
     - trees:trees
     - user:user
     - categorie:categorie
-    - feedback:feedback
+    - damage:damage
+    - impact:impact
     - grandeur:grandeur
     - import:import
   web:
