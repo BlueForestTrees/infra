@@ -1,13 +1,12 @@
 version: '2'
 services:
   user:
-    image: blueforest/user:1.0.5
+    image: blueforest/user:1.0.6
     environment:
       DB_HOST: mongo
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
       DEBUG: api:*
       AUTH_TOKEN_SECRET: ZZZ
     links:
@@ -100,12 +99,12 @@ services:
       DB_PWD: YYY
       NODE_ENV: production
       DEBUG: api:*
-      USER_BASE_URL: "http://user:8080"
+      USER_BASE_URL: "http://user"
     links:
     - mongo:database
     - user:user
   trees:
-    image: blueforest/trees:1.0.5
+    image: blueforest/trees:1.0.6
     environment:
       DB_HOST: mongo
       DB_USER: XXX
@@ -126,6 +125,16 @@ services:
     command: mongod --auth
     ports:
     - 27277:27017
+  off-import:
+    image: blueforest/off-import:1.0.1
+    environment:
+      DB_HOST: mongo
+      DB_USER: XXX
+      DB_PWD: YYY
+      NODE_ENV: production
+      DEBUG: api:*
+    links:
+      - mongo:database
   api:
     image: openresty/openresty:alpine
     volumes:
