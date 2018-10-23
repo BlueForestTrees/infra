@@ -20,7 +20,7 @@ services:
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
+      PORT: '80'
       DEBUG: api:*
     links:
     - mongo:database
@@ -31,7 +31,7 @@ services:
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
+      PORT: '80'
       DEBUG: api:*
     links:
     - mongo:database
@@ -81,7 +81,7 @@ services:
       DB_USER: XXX
       DB_PWD: YYY
       NODE_ENV: production
-      PORT: '8080'
+      PORT: '80'
       DEBUG: api:*
     links:
     - mongo:database
@@ -89,7 +89,7 @@ services:
     image: blueforest/grandeur:latest
     environment:
       NODE_ENV: production
-      PORT: '8080'
+      PORT: '80'
       DEBUG: api:*
   import:
     image: blueforest/import:1.0.12
@@ -125,6 +125,14 @@ services:
     command: mongod --auth
     ports:
     - 27277:27017
+  search-alim:
+    image: blueforest/search-alim:0.0.2
+    environment:
+      DB_CONNECTION_STRING: fff
+      NODE_ENV: production
+      DEBUG: api:*
+    links:
+    - mongo:database
   off-import:
     image: blueforest/off-import:1.0.1
     environment:
