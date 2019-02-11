@@ -1,0 +1,61 @@
+#IF containerized kube, in cluster.yml
+services:
+  kubelet:
+    extra_binds:
+      - /mongo:/mongo:rshared
+
+#connection string mongo
+#mongodb://admin:7Rlititi@mongodb-replicaset.mongodb-replicaset.svc.cluster.local:27017/BlueForestTrees?replicaSet=rs0&authSource=admin
+
+#storageClasses
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain
+
+#persistentVolumes:
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mongo-one|two|three
+spec:
+  capacity:
+    storage: 40Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /var/lib/mongo
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - one|two|three
+
+#mongo answers from helm catalog
+replicas: 3
+replicaSetName: rs0
+port: 27017
+auth:
+  enabled: true
+  adminUser: god
+  adminPassword: tirlititi
+  key: fsz1468fez468
+image:
+  repository: mongo
+  tag: xenial
+  pullPolicy: IfNotPresent
+persistentVolume:
+  enabled: true
+  storageClass: local-storage
+  accessModes:
+    - ReadWriteOnce
+  size: 40Gi
