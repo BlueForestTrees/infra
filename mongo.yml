@@ -1,9 +1,3 @@
-#IF containerized kube, in cluster.yml
-services:
-  kubelet:
-    extra_binds:
-      - /mongo:/mongo:rshared
-
 #connection string mongo
 #mongodb://admin:7Rlititi@mongodb-replicaset.mongodb-replicaset.svc.cluster.local:27017/BlueForestTrees?replicaSet=rs0&authSource=admin
 

@@ -1,0 +1,5 @@
+#mongo local storage, IF containerized kube, in cluster.yml
+services:
+  kubelet:
+    extra_binds:
+      - /mongo:/mongo:rshared
