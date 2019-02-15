@@ -1,0 +1,89 @@
+
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: kube-backup-reader
+rules:
+  - apiGroups:
+      - '*'
+    resources:
+      - '*'
+    verbs: ["get", "list"]
+---
+
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: kube-backup
+  namespace: default
+subjects:
+  - kind: ServiceAccount
+    name: kube-backup
+    namespace: kube-system
+roleRef:
+  kind: ClusterRole
+  name: kube-backup-reader
+  apiGroup: rbac.authorization.k8s.io
+
+#créer un secret contenant id_rsa et known_hosts la clé vers le repo git
+ssh-keygen -f ./id_rsa
+ssh-keyscan $YOUR_GIT_HOST > known_hosts
+kubectl create secret generic kube-backup-ssh -n kube-system --from-file=id_rsa --from-file=known_hosts
+
+#le cron qui fait le beckup
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: kube-backup
+  namespace: kube-system
+
+---
+
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: kube-state-backup
+  namespace: kube-system
+  labels:
+    app: kube-backup
+spec:
+  schedule: "*/10 * * * *"
+  concurrencyPolicy: Replace
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: kube-backup
+          name: kube-backup
+        spec:
+          containers:
+            - image: quay.io/plange/kube-backup:1.12.0-1
+              imagePullPolicy: Always
+              name: backup
+              resources: {}
+              env:
+                - name: GIT_REPO
+                  value: "git@github.com:BlueForestTrees/kube.git"
+                - name: GIT_USERNAME
+                  value: slimee
+                - name: GIT_EMAIL
+                  value: smedini@gmail.com
+              volumeMounts:
+                - mountPath: /backup/
+                  name: cache
+                - mountPath: /backup/.ssh
+                  name: sshkey
+          dnsPolicy: ClusterFirst
+          terminationGracePeriodSeconds: 30
+          serviceAccountName: kube-backup
+          volumes:
+            - name: sshkey
+              secret:
+                defaultMode: 420
+                secretName: kube-backup-ssh
+            - name: cache
+              emptyDir: {}
+          restartPolicy: OnFailure

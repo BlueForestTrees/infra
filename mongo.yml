@@ -1,7 +1,7 @@
 #connection string mongo
 #mongodb://admin:7Rlititi@mongodb-replicaset.mongodb-replicaset.svc.cluster.local:27017/BlueForestTrees?replicaSet=rs0&authSource=admin
 
-#storageClasses
+#si pas déjà: storageClasses
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:

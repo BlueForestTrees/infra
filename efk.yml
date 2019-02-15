@@ -1,4 +1,4 @@
-#EFK app configmap: fluentbit
+#namespace: efk, EFK app Config Map: efk-fluent-bit-config, key fluent-bit.conf
 [SERVICE]
   Flush        1
   Daemon       Off
@@ -38,5 +38,5 @@
   Type  flb_type
   Logstash_Prefix ingress
 
-#nginx-configuration config map (project system)
+#namespace: ingress-nginx, Config Map: nginx-configuration, key log-format-upstream (project system)
 log-format-upstream: {"request_id": "$req_id", "method": "$request_method", "status":$status, "vhost": "$host", "path": "$uri","request_query": "$args", "request_length": $request_length, "duration": $request_time, "bytes_sent": $bytes_sent, "request_proto": "$server_protocol", "http_user_agent":"$http_user_agent" }

@@ -1,0 +1,40 @@
+#cluster issuer (crd)
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: user@example.com
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    http01: {}
+
+
+#answers:
+"clusterissuerEnabled": "true",
+"createCustomResource": "true",
+"defaultImage": "true",
+"image.repository": "quay.io/jetstack/cert-manager-controller",
+"image.tag": "v0.4.1",
+"ingressShim.defaultIssuerName": "letsencrypt-prod",
+"letsencrypt.email": "smedini@gmail.com",
+"replicaCount": "1",
+"webhook.enabled": "false",
+"webhook.extraArgs": "[]",
+"webhook.image.repository": "quay.io/jetstack/cert-manager-webhook",
+"webhook.image.tag": "v0.5.2",
+"webhook.replicaCount": "1"
+
+#in ingress.yml spec node:
+tls:
+  - hosts:
+      - integ.blueforest.org
+
+#in ingress annotation:
+certmanager:
+  k8s:
+    io/cluster-issuer: letsencrypt-prod
+kubernetes:
+  io/tls-acme: "true"

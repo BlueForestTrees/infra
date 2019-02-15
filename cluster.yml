@@ -3,3 +3,4 @@ services:
   kubelet:
     extra_binds:
       - /mongo:/mongo:rshared
+      - /postgres:/postgres:rshared
