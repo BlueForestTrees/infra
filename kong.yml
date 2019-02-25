@@ -82,3 +82,9 @@ spec:
               operator: In
               values:
                 - three
+
+
+#answers.yml
+postgresql.persistence.storageClass: local-storage
+postgresql.persistence.size: 1Gi
+ingressController.enabled: true
