@@ -1,5 +1,5 @@
 #kubectl cmd
   kubectl get namespaces
 
-  kubectl config current-context
-  kubectl config set-context Default --namespace=bf
+  kubectl config set-context $(kubectl config current-context) --namespace=bf
+  kubectl port-forward pod/mongodb-replicaset-2 27018:27017
