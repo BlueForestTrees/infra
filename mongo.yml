@@ -45,7 +45,7 @@ auth:
   key: fsz1468fez468
 image:
   repository: mongo
-  tag: xenial
+  tag: bionic
   pullPolicy: IfNotPresent
 persistentVolume:
   enabled: true
@@ -53,3 +53,4 @@ persistentVolume:
   accessModes:
     - ReadWriteOnce
   size: 40Gi
+configMap: {storage:{wiredTiger:{engineConfig:{cacheSizeGB: "1.5"}}}}
